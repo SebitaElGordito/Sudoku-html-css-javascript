@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff">
+    <title>Sudoku</title>
+    <link rel="shortcut icon" href="./static/images/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">  
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="header__container">
+            <a href="#" class="header__logo">
+                Sudoku
+            </a>
+            <div class="dark__mode-toggle" id="dark__mode-toggle">
+                <i class="bx bxs__sun"></i>
+                <i class="bx bxs__moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="screen">
+            <div class="start__screen active" id="start__screen">
+                <input type="text" placeholder="Your name" maxlength="11" class="input__name" id="input__name">
+                <div class="btn" id="btn__level">
+                    Easy
+                </div>
+                <div class="btn" id="btn__continue">Continue</div>
+                <div class="btn btn__blue" id="btn__play">New game</div>
+            </div>
+
+            <div class="main__game" id="game__screen">
+                <div class="main__sudoku-grid">
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                    <div class="main__grid-cell"></div>
+                </div>
+
+                <div class="main__game-info">
+                    <div class="main__game-info-box main__game-info-name">
+                        <span id="player__name">tuat</span>
+                    </div>
+                    <div class="main__game-info-box main__game-info-level">
+                        <span id="game__level">Easy</span>
+                    </div>
+                </div>
+
+                <div class="main__game-info-box main__game-info-time">
+                    <span id="game__time">10:20</span>
+                    <div class="pause__btn" id="btn__pause">
+                        <i class="bx bx__pause"></i>
+                    </div>
+                </div>
+
+                <div class="numbers">
+                    <div class="number">1</div>
+                    <div class="number">2</div>
+                    <div class="number">3</div>
+                    <div class="number">4</div>
+                    <div class="number">5</div>
+                    <div class="number">6</div>
+                    <div class="number">7</div>
+                    <div class="number">8</div>
+                    <div class="number">9</div>
+                    <div class="delete" id="btn__delete">X</div>
+                </div>
+            </div>
+
+            <div class="pause__screen" id="pause__screen">
+                <div class="btn btn__blue" id="btn__resume">Resume</div>
+                <div class="btn" id="btn__new-game">New game</div>
+            </div>
+
+            <div class="result__screen" id="result__screen">
+                <div class="congrate">Completed</div>
+                <div class="info">Time</div>
+                <div id="result__time"></div>
+                <div class="btn" id="btn__new-game-2">New game</div>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="./js/constant.js"></script>
+    <script defer src="./js/sudoku.js"></script>
+    <script defer src="./js/app.js"></script>
+</body>
+
+</html>
